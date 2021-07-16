@@ -1,0 +1,131 @@
+// ===============  AUTOMATICALLY CONVERT PX TO REM
+@function rem($size) {
+    $remSize: $size / 15;
+    @return #{$remSize}rem;
+}
+
+// ===============  MEDIA QUERIES
+@mixin media-query ($size) {
+    @if $size == desktop-mega {
+        @media screen and (min-width: 1500px) {
+            @content;
+        }
+    }
+    @else if $size == desktop {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    } 
+    @else if $size == tablet-mini {
+        @media screen and (min-width: 786px) {
+            @content;
+        }
+    } 
+    @else if $size == large-mobile {
+        @media screen and (min-width: 602px) {
+            @content;
+        }
+    } 
+    @else if $size == mobile {
+        @media screen and (min-width: 320px) {
+            @content;
+        }
+    } 
+    @else if $size == mobile-mini {
+      @media screen and (min-width: 300px) {
+          @content;
+      }
+  } 
+}
+
+
+// =======================  ROOT SETTINGS
+
+// ===============  COLORS 
+$color-pry-100: #5267DF;
+$color-pry-200: #FA5959;
+$color-sec-100: #242A45;
+$color-sec-200: #9194A2;
+$color-bg: #f2f2f2;
+
+// $shadow-btn: rem(0) rem(2) rem(5) rgba(0, 0, 0, 0.199);
+
+// =======================  TYPOGRAPHY
+
+// ===============  FONT FAMILIY       
+$font-pry: 'Rubik', sans-serif;
+
+// ===============  FONT WEIGHT
+$weight-regular: 400;
+$weight-medium: 500;
+
+// =============== UNIVERSAL VALUES
+$max-width: rem(1104);
+
+// ===============  BASE CSS RESET
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+html:focus-within {
+  scroll-behavior: smooth;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
+
+// =============== MAKE ANIMATION OPTIONAL FOR USERS
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    //   scroll-behavior: auto !important;
+    }
+}
+
+
+// =============== ROOT 
+
+body {
+    fon
+    font-family: $font-pry;
+}
