@@ -59,5 +59,70 @@ picture {
   }
 }
 body {
+  font-size: 1.0666666667rem;
   font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #242A45;
+  background-color: #f2f2f2;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  text-transform: uppercase;
+  font-size: 0.8666666667rem;
+  line-height: 1.1333333333rem;
+  font-weight: 600;
+  color: #242A45;
+}
+a:hover, a:active {
+  transition: 0.5s;
+  color: #FA5959;
+}
+
+.btn {
+  background-color: #FA5959;
+  color: #f2f2f2;
+  padding: 0.7333333333rem 2.2666666667rem;
+  border-radius: 0.3333333333rem;
+  border: 0.1333333333rem solid #FA5959;
+}
+.btn:hover {
+  transition: 0.5s;
+  background-color: #f2f2f2;
+  color: #FA5959;
+}
+
+.header {
+  min-height: 0rem;
+  max-width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header__inner {
+  min-height: 2.9333333333rem;
+  max-width: 73.6rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-top: 1.3333333333rem;
+}
+.header__inner > * {
+  flex: 1;
+}
+
+.menu__inner {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu__item {
+  margin-left: 2.9333333333rem;
+}
+
+.sample {
+  background-color: #f2f2f2;
+  height: 2000px;
+  max-width: 100%;
 }/*# sourceMappingURL=main.css.map */
