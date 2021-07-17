@@ -143,6 +143,10 @@ a:hover, a:active {
   display: none;
 }
 
+.menu__social {
+  display: none;
+}
+
 .sample {
   background-color: #f2f2f2;
   height: 2000px;
@@ -200,6 +204,15 @@ a:hover, a:active {
     color: #f2f2f2;
     font-size: 1.0666666667rem;
     font-weight: 400;
+  }
+
+  .menu__social {
+    flex: 10;
+    display: flex;
+    align-items: flex-end;
+  }
+  .menu__social > * {
+    margin: 1.3333333333rem;
   }
 
   .nav-hr {

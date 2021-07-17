@@ -208,6 +208,9 @@ a {
 .nav-hr {
   display: none;
 }
+.menu__social {
+  display: none;
+}
 
 .sample {
   background-color: $color-bg;
@@ -216,87 +219,93 @@ a {
 }
 
 @media (max-width: 662px) {
-    .logo {
-       position: relative;
-       z-index: 1000; 
-    }
-    .mobile-nav {
-        position: relative;
-        z-index: 100; 
-        display: block;
+  .logo {
+    position: relative;
+    z-index: 1000;
+  }
+  .mobile-nav {
+    position: relative;
+    z-index: 100;
+    display: block;
+  }
 
+  .nav-close {
+    i {
+      color: $color-bg;
+      font-size: rem(20);
+      background-color: hsla(229, 31%, 21%, 0.969);
+    }
+  }
+  .nav-open {
+    i {
+      color: $color-sec-100;
+      font-size: rem(20);
+      background-color: $color-bg;
+    }
+  }
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    &__inner {
+      display: none;
+      background-color: hsla(229, 31%, 21%, 0.969);
+      position: absolute;
+      min-height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-top: rem(100);
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
     }
 
-
-    .nav-close {
-      i {
-        color: $color-bg;
-        font-size: rem(20);
-        background-color: hsla(229, 31%, 21%, 0.969);
-      }
-    }
-    .nav-open {
-      i {
-        color: $color-sec-100;
-        font-size: rem(20);
-        background-color: $color-bg;
-      }
-    }
-    .menu {
-        display: flex;
-        justify-content: flex-end;
-        &__inner {
-          display: none;
-        background-color: hsla(229, 31%, 21%, 0.969);
-        position: absolute;
-        min-height: 100vh;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding-top: rem(100);
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
-        }
-
-        &__item {
-            display: block;
-            margin-left: rem(0);
-            padding: rem(16) rem(0);
-
-            a {
-              color: $color-bg;
-              font-size: rem(16);
-              font-weight: 400;
-            }
-        }
-    }
-    .nav-hr {
+    &__item {
       display: block;
-        height: rem(1);
-        width: 90%;
-        background-color: #97979744;
+      margin-left: rem(0);
+      padding: rem(16) rem(0);
+
+      a {
+        color: $color-bg;
+        font-size: rem(16);
+        font-weight: 400;
+      }
     }
+  }
+  .menu__social {
+    flex: 10;
+    display: flex;
+    align-items: flex-end;
 
-    .mobile-btn {
-        width: 100%;
-        display: block;
-
-        .btn {
-            display: block;
-            text-align: center;
-            width: 90%;
-            margin: 0 auto;
-            background-color: transparent;
-            border-color: $color-bg;
-
-            &:hover {
-              transition: 0.5s;
-              background-color: $color-bg;
-              color: $color-sec-100;
-            }
-        }
+    & > * {
+      margin: rem(20);
     }
+  }
+  .nav-hr {
+    display: block;
+    height: rem(1);
+    width: 90%;
+    background-color: #97979744;
+  }
 
+  .mobile-btn {
+    width: 100%;
+    display: block;
+
+    .btn {
+      display: block;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      background-color: transparent;
+      border-color: $color-bg;
+
+      &:hover {
+        transition: 0.5s;
+        background-color: $color-bg;
+        color: $color-sec-100;
+      }
+    }
+  }
 }
