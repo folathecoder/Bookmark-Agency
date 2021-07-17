@@ -94,7 +94,7 @@ a:hover, a:active {
   padding: 0.7333333333rem 2.2666666667rem;
   border-radius: 0.3333333333rem;
   border: 0.1333333333rem solid #fa5959;
-  box-shadow: 0rem 0.1333333333rem 0.2rem rgba(0, 0, 0, 0.104);
+  box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.104);
 }
 .btn:hover {
   transition: 0.5s;
@@ -247,7 +247,7 @@ a:hover, a:active {
   min-height: 0rem;
   margin: 0 1rem;
 }
-.hero__inner {
+b .hero__inner {
   max-width: 73.6rem;
   min-height: 0rem;
   margin: 0 auto;
