@@ -94,7 +94,7 @@ a:hover, a:active {
   padding: 0.7333333333rem 2.2666666667rem;
   border-radius: 0.3333333333rem;
   border: 0.1333333333rem solid #fa5959;
-  box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.104);
+  box-shadow: 0.0666666667rem 0.2666666667rem 0.2rem rgba(0, 0, 0, 0.104);
 }
 .btn:hover {
   transition: 0.5s;
@@ -115,6 +115,7 @@ a:hover, a:active {
   left: 0;
   right: 0;
   background-color: #f2f2f2;
+  z-index: 1000;
 }
 .header__inner {
   min-height: 2.9333333333rem;
@@ -248,6 +249,35 @@ a:hover, a:active {
   background-position: 3.3333333333rem 3.3333333333rem;
   background-size: 38.4666666667rem 13.5333333333rem;
 }
+@media screen and (min-width: 602px) {
+  .hero__bg {
+    background-position: 13.3333333333rem 8rem;
+    background-size: 53.3333333333rem 23.4666666667rem;
+  }
+}
+@media screen and (min-width: 786px) {
+  .hero__bg {
+    background-position: 26.6666666667rem 8rem;
+    background-size: 53.3333333333rem 23.4666666667rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero__bg {
+    background-position: 40rem 9.3333333333rem;
+    background-size: 66.6666666667rem 23.4666666667rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__bg {
+    background-position: 53.3333333333rem 12rem;
+    background-size: 66.6666666667rem 23.4666666667rem;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .hero__bg {
+    background-image: none;
+  }
+}
 
 .hero {
   max-width: 100%;
@@ -263,18 +293,54 @@ a:hover, a:active {
   align-items: center;
   text-align: center;
 }
+@media screen and (min-width: 992px) {
+  .hero__inner {
+    min-height: calc(80vh - 68px);
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+  .hero__inner > * {
+    flex: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__inner {
+    min-height: calc(100vh - 68px);
+  }
+}
+@media screen and (min-width: 1500px) {
+  .hero__inner {
+    min-height: 40rem;
+  }
+}
 .hero__buttons {
   max-width: 100%;
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 992px) {
+  .hero__buttons {
+    justify-content: flex-start;
+  }
+}
 
 .hero__image {
   padding: 2rem 0rem;
 }
+@media screen and (min-width: 992px) {
+  .hero__image {
+    padding: 0rem 0rem;
+  }
+  .hero__image img {
+    transform: translateY(2.6666666667rem);
+  }
+}
 
 .hero__content p {
   margin: 1rem 0rem;
+}
+.hero__content h1, .hero__content p {
+  max-width: 33.3333333333rem;
 }
 
 .hero__btn {
@@ -304,6 +370,24 @@ h1 {
   font-size: 2rem;
   line-height: 2.6666666667rem;
   font-weight: 600;
+}
+@media screen and (min-width: 786px) {
+  h1 {
+    font-size: 2.6666666667rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.3333333333rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 3.4666666667rem;
+  }
 }
 
 p {

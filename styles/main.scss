@@ -155,7 +155,7 @@
     padding: rem(11) rem(34);
     border-radius: rem(5);
     border: rem(2) solid $color-pry-200;
-    box-shadow: rem(0) rem(0) rem(3) rgba(0, 0, 0, 0.104);
+    box-shadow: rem(1) rem(4) rem(3) rgba(0, 0, 0, 0.104);
   
     &:hover {
       transition: 0.5s;
@@ -177,6 +177,7 @@
     left: 0;
     right: 0;
     background-color: $color-bg;
+    z-index: 1000;
     // box-shadow: rem(0) rem(0) rem(3) rgba(0, 0, 0, 0.24);
   
     &__inner {
@@ -318,6 +319,30 @@
     background-repeat: no-repeat;
     background-position: rem(50) rem(50);
     background-size: rem(577) rem(203);
+
+    @include media-query(large-mobile) {
+      background-position: rem(200) rem(120);
+      background-size: rem(800) rem(352);
+    }
+
+    @include media-query(tablet-mini) {
+      background-position: rem(400) rem(120);
+      background-size: rem(800) rem(352);
+    }
+
+    @include media-query(tablet) {
+      background-position: rem(600) rem(140);
+      background-size: rem(1000) rem(352);
+    }
+
+    @include media-query(desktop) {
+      background-position: rem(800) rem(180);
+      background-size: rem(1000) rem(352);
+    }
+    @include media-query(desktop-mega) {
+      background-image: none;
+    }
+
   }
   .hero {
     max-width: 100%;
@@ -332,20 +357,53 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+
+      @include media-query(tablet) {
+        min-height: calc(80vh - 68px);
+        flex-direction: row-reverse;
+        text-align: left;
+
+        & > * {
+          flex: 1;
+        }
+      }
+
+      @include media-query(desktop) {
+        min-height: calc(100vh - 68px);
+      }
+
+      @include media-query(desktop-mega) {
+        min-height: rem(600);
+      }
     }
   
     &__buttons {
       max-width: 100%;
       display: flex;
       justify-content: center;
+
+      @include media-query(tablet) {
+        justify-content: flex-start;
+      }
     }
   }
   .hero__image {
     padding: rem(30) rem(0);
+
+    @include media-query(tablet) {
+      padding: rem(0) rem(0);
+
+      img {
+        transform: translateY(rem(40));
+      }
+    }
   }
   .hero__content {
     p {
       margin: rem(15) rem(0);
+    }
+    h1, p {
+      max-width: rem(500);
     }
   }
   .hero__btn {
@@ -375,6 +433,21 @@
     font-size: rem(30);
     line-height: rem(40);
     font-weight: 600;
+
+    @include media-query(tablet-mini) {
+      font-size: rem(40);
+      line-height: rem(45);
+    }
+
+    @include media-query(tablet) {
+      font-size: rem(45);
+      line-height: rem(50);
+    }
+
+    @include media-query(desktop) {
+      font-size: rem(48);
+      line-height: rem(52);
+    }
   }
   
   p {
