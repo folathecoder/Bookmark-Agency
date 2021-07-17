@@ -111,7 +111,6 @@ a:hover, a:active {
   top: 0;
   left: 0;
   right: 0;
-  box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.24);
 }
 .header__inner {
   min-height: 2.9333333333rem;
