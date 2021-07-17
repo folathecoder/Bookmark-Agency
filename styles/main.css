@@ -94,6 +94,7 @@ a:hover, a:active {
   padding: 0.7333333333rem 2.2666666667rem;
   border-radius: 0.3333333333rem;
   border: 0.1333333333rem solid #fa5959;
+  box-shadow: 0rem 0.1333333333rem 0.2rem rgba(0, 0, 0, 0.104);
 }
 .btn:hover {
   transition: 0.5s;
@@ -113,6 +114,7 @@ a:hover, a:active {
   top: 0;
   left: 0;
   right: 0;
+  background-color: #f2f2f2;
 }
 .header__inner {
   min-height: 2.9333333333rem;
@@ -239,4 +241,66 @@ a:hover, a:active {
     background-color: #f2f2f2;
     color: #242a45;
   }
+}
+.hero {
+  max-width: 100%;
+  min-height: 0rem;
+  margin: 0 1rem;
+}
+.hero__inner {
+  max-width: 73.6rem;
+  min-height: 0rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero__buttons {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__image {
+  padding: 2rem 0rem;
+}
+
+.hero__content p {
+  margin: 1rem 0rem;
+}
+
+.hero__btn {
+  display: block;
+  margin: 0.6666666667rem 0.3333333333rem;
+  padding: 0.6666666667rem 0.6666666667rem;
+}
+.hero__btn a {
+  font-size: 0.8rem;
+}
+
+.btn1,
+.btn1:hover {
+  background-color: #5267df;
+  color: #f2f2f2;
+  border-color: #5267df;
+}
+
+.btn2,
+.btn2:hover {
+  background-color: #f2f2f2;
+  color: #242a45;
+  border-color: #f2f2f2;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.6666666667rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6666666667rem;
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */

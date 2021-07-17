@@ -155,6 +155,7 @@ a {
   padding: rem(11) rem(34);
   border-radius: rem(5);
   border: rem(2) solid $color-pry-200;
+  box-shadow: rem(0) rem(2) rem(3) rgba(0, 0, 0, 0.104);
 
   &:hover {
     transition: 0.5s;
@@ -175,6 +176,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
+  background-color: $color-bg;
   // box-shadow: rem(0) rem(0) rem(3) rgba(0, 0, 0, 0.24);
 
   &__inner {
@@ -308,4 +310,70 @@ a {
       }
     }
   }
+}
+
+// =============== HERO SECTION 
+
+.hero {
+  max-width: 100%;
+  min-height: rem(0);
+  margin: 0 rem(15);
+
+  &__inner {
+    max-width: $max-width;
+    min-height: rem(0);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__buttons {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.hero__image {
+  padding: rem(30) rem(0);
+}
+.hero__content {
+  p {
+    margin: rem(15) rem(0);
+  }
+}
+.hero__btn {
+  display: block;
+  margin: rem(10) rem(5);
+  padding: rem(10) rem(10);
+
+  a {
+    font-size: rem(12);
+  }
+}
+
+.btn1, 
+.btn1:hover {
+  background-color: $color-pry-100;
+  color: $color-bg;
+  border-color: $color-pry-100;
+}
+.btn2,
+.btn2:hover {
+  background-color: $color-bg;
+  color: $color-sec-100;
+  border-color: $color-bg;
+}
+
+h1 {
+  font-size: rem(30);
+  line-height: rem(40);
+  font-weight: 600;
+}
+
+p {
+  font-size: rem(15);
+  line-height: rem(25);
+  font-weight: 400;
 }
