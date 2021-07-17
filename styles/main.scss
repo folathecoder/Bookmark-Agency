@@ -87,6 +87,8 @@ picture {
 }
 
 button {
+  border-color: transparent;
+  background-color: transparent;
   border: none;
   box-shadow: none;
   cursor: pointer;
@@ -203,6 +205,10 @@ a {
   display: none;
 }
 
+.nav-hr {
+  display: none;
+}
+
 .sample {
   background-color: $color-bg;
   height: 2000px;
@@ -261,12 +267,13 @@ a {
 
             a {
               color: $color-bg;
-              font-size: rem(17);
+              font-size: rem(16);
               font-weight: 400;
             }
         }
     }
     .nav-hr {
+      display: block;
         height: rem(1);
         width: 90%;
         background-color: #97979744;

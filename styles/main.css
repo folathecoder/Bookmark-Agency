@@ -30,6 +30,8 @@ picture {
 }
 
 button {
+  border-color: transparent;
+  background-color: transparent;
   border: none;
   box-shadow: none;
   cursor: pointer;
@@ -137,6 +139,10 @@ a:hover, a:active {
   display: none;
 }
 
+.nav-hr {
+  display: none;
+}
+
 .sample {
   background-color: #f2f2f2;
   height: 2000px;
@@ -192,11 +198,12 @@ a:hover, a:active {
   }
   .menu__item a {
     color: #f2f2f2;
-    font-size: 1.1333333333rem;
+    font-size: 1.0666666667rem;
     font-weight: 400;
   }
 
   .nav-hr {
+    display: block;
     height: 0.0666666667rem;
     width: 90%;
     background-color: #97979744;
