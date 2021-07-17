@@ -17,6 +17,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
 
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -24,16 +27,31 @@
   <header class="header">
     <div class="header__inner">
       <div class="logo">
-        <a href="index.html">
+        <a href="index.html" class="logo-1">
           <img src="./images/logo-bookmark.svg" alt="Bookmark Logo">
+        </a>
+        <a href="index.html" class="logo-2 nav-inactive">
+          <img src="./images/logo-bookmark-active.svg" alt="Bookmark Logo">
         </a>
       </div>
       <nav class="menu">
-        <ul class="menu__inner">
+        <div class="mobile-nav">
+          <button class="nav-open">
+            <i class="fas fa-bars"></i>
+          </button>
+          <button class="nav-close nav-inactive">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <ul class="menu__inner nav-inactive">
+          <div class="nav-hr"></div>
           <li class="menu__item"><a href="">features</a></li>
+          <div class="nav-hr"></div>
           <li class="menu__item"><a href="">pricing</a></li>
+          <div class="nav-hr"></div>
           <li class="menu__item"><a href="">contact</a></li>
-          <li class="menu__item"><a href="" class="btn">login</a></li>
+          <div class="nav-hr"></div>
+          <li class="menu__item mobile-btn"><a href="" class="btn">login</a></li>
         </ul>
       </nav>
     </div>
@@ -45,7 +63,7 @@
 
 
 
-
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -1,64 +1,57 @@
 // ===============  AUTOMATICALLY CONVERT PX TO REM
 @function rem($size) {
-    $remSize: $size / 15;
-    @return #{$remSize}rem;
+  $remSize: $size / 15;
+  @return #{$remSize}rem;
 }
 
 // ===============  MEDIA QUERIES
-@mixin media-query ($size) {
-    @if $size == desktop-mega {
-        @media screen and (min-width: 1500px) {
-            @content;
-        }
+@mixin media-query($size) {
+  @if $size == desktop-mega {
+    @media screen and (min-width: 1500px) {
+      @content;
     }
-    @else if $size == desktop {
-        @media screen and (min-width: 1200px) {
-            @content;
-        }
+  } @else if $size == desktop {
+    @media screen and (min-width: 1200px) {
+      @content;
     }
-    @else if $size == tablet {
-        @media screen and (min-width: 992px) {
-            @content;
-        }
-    } 
-    @else if $size == tablet-mini {
-        @media screen and (min-width: 786px) {
-            @content;
-        }
-    } 
-    @else if $size == large-mobile {
-        @media screen and (min-width: 602px) {
-            @content;
-        }
-    } 
-    @else if $size == mobile {
-        @media screen and (min-width: 320px) {
-            @content;
-        }
-    } 
-    @else if $size == mobile-mini {
-      @media screen and (min-width: 300px) {
-          @content;
-      }
-  } 
+  } @else if $size == tablet {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  } @else if $size == tablet-mini {
+    @media screen and (min-width: 786px) {
+      @content;
+    }
+  } @else if $size == large-mobile {
+    @media screen and (min-width: 602px) {
+      @content;
+    }
+  } @else if $size == mobile {
+    @media screen and (min-width: 320px) {
+      @content;
+    }
+  } @else if $size == mobile-mini {
+    @media screen and (min-width: 300px) {
+      @content;
+    }
+  }
 }
-
 
 // =======================  ROOT SETTINGS
 
-// ===============  COLORS 
-$color-pry-100: #5267DF;
-$color-pry-200: #FA5959;
-$color-sec-100: #242A45;
-$color-sec-200: #9194A2;
+// ===============  COLORS
+$color-pry-100: #5267df;
+$color-pry-200: #fa5959;
+$color-sec-100: #242a45;
+$color-sec-200: #9194a2;
 $color-bg: #f2f2f2;
 
 // $shadow-btn: rem(0) rem(2) rem(5) rgba(0, 0, 0, 0.199);
 
 // =======================  TYPOGRAPHY
 
-// ===============  FONT FAMILIY       
-$font-pry: 'Rubik', sans-serif;
+// ===============  FONT FAMILIY
+$font-pry: "Rubik", sans-serif;
 
 // ===============  FONT WEIGHT
 $weight-regular: 400;
@@ -76,14 +69,14 @@ $max-width: rem(1104);
   padding: 0;
 }
 li {
-    list-style: none;
+  list-style: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 a:not([class]) {
-    text-decoration-skip-ink: auto;
-  }
+  text-decoration-skip-ink: auto;
+}
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -93,112 +86,210 @@ picture {
   display: block;
 }
 
+button {
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
 .sr-only {
-    border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    -webkit-clip-path: inset(50%) !important;
-            clip-path: inset(50%) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
-    white-space: nowrap !important;
-  }
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
 
 // =============== MAKE ANIMATION OPTIONAL FOR USERS
 @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-     scroll-behavior: auto;
-    }
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
     //   scroll-behavior: auto !important;
-    }
+  }
 }
 
-
-// =============== ROOT 
+// =============== ROOT
 
 body {
-    font-size: rem(16);
-    font-family: $font-pry;
-    font-weight: $weight-regular;
-    color: $color-sec-100;
-    background-color: $color-bg;
-    max-width: 100%;
-    min-height: 100vh;
+  font-size: rem(16);
+  font-family: $font-pry;
+  font-weight: $weight-regular;
+  color: $color-sec-100;
+  background-color: $color-bg;
+  max-width: 100%;
+  min-height: 100vh;
 }
 
 a {
-    text-transform: uppercase;
-    font-size: rem(13);
-    line-height: rem(17);
-    font-weight: 600;
-    color: $color-sec-100;
+  text-transform: uppercase;
+  font-size: rem(13);
+  line-height: rem(17);
+  font-weight: 500;
+  color: $color-sec-100;
 
-    &:hover,
-    &:active {
-        transition: 0.5s;
-        color: $color-pry-200;
-    }
+  &:hover,
+  &:active {
+    transition: 0.5s;
+    color: $color-pry-200;
+  }
 }
 
 .btn {
-    background-color: $color-pry-200;
-    color: $color-bg;
-    padding: rem(11) rem(34);
-    border-radius: rem(5);
-    border: rem(2) solid $color-pry-200;
+  background-color: $color-pry-200;
+  color: $color-bg;
+  padding: rem(11) rem(34);
+  border-radius: rem(5);
+  border: rem(2) solid $color-pry-200;
 
-    &:hover {
-        transition: 0.5s;
-        background-color: $color-bg;
-        color: $color-pry-200;
-    }
+  &:hover {
+    transition: 0.5s;
+    background-color: $color-bg;
+    color: $color-pry-200;
+  }
 }
-
+.nav-inactive {
+  display: none;
+}
 
 // =============== HEADER SECTION
 .header {
-    min-height: rem(0);
-    max-width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
+  min-height: rem(0);
+  max-width: 100%;
+  position: sticky;
+  padding: rem(0) rem(20);
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: rem(0) rem(0) rem(3) rgba(0, 0, 0, 0.24);
 
-    &__inner {
-        min-height: rem(44);
-        max-width: $max-width;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        padding-top: rem(20);
+  &__inner {
+    min-height: rem(44);
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
 
-        & > * {
-            flex: 1;
-        }
+    & > * {
+      flex: 1;
     }
+  }
 }
 .menu {
-    &__inner {
-        display: flex;
-        justify-content: flex-end;
-    }
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+  }
 
-    &__item {
-        margin-left: rem(44);
-    }
+  &__item {
+    margin-left: rem(44);
+  }
+}
+.mobile-nav {
+  display: none;
 }
 
 .sample {
-    background-color: $color-bg;
-    height: 2000px;
-    max-width: 100%;
+  background-color: $color-bg;
+  height: 2000px;
+  max-width: 100%;
+}
+
+@media (max-width: 662px) {
+    .logo {
+       position: relative;
+       z-index: 1000; 
+    }
+    .mobile-nav {
+        position: relative;
+        z-index: 100; 
+        display: block;
+
+    }
+
+
+    .nav-close {
+      i {
+        color: $color-bg;
+        font-size: rem(20);
+        background-color: hsla(229, 31%, 21%, 0.969);
+      }
+    }
+    .nav-open {
+      i {
+        color: $color-sec-100;
+        font-size: rem(20);
+        background-color: $color-bg;
+      }
+    }
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        &__inner {
+          display: none;
+        background-color: hsla(229, 31%, 21%, 0.969);
+        position: absolute;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: rem(100);
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        }
+
+        &__item {
+            display: block;
+            margin-left: rem(0);
+            padding: rem(16) rem(0);
+
+            a {
+              color: $color-bg;
+              font-size: rem(17);
+              font-weight: 400;
+            }
+        }
+    }
+    .nav-hr {
+        height: rem(1);
+        width: 90%;
+        background-color: #97979744;
+    }
+
+    .mobile-btn {
+        width: 100%;
+        display: block;
+
+        .btn {
+            display: block;
+            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+            background-color: transparent;
+            border-color: $color-bg;
+
+            &:hover {
+              transition: 0.5s;
+              background-color: $color-bg;
+              color: $color-sec-100;
+            }
+        }
+    }
+
 }
