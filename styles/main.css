@@ -242,12 +242,19 @@ a:hover, a:active {
     color: #242a45;
   }
 }
+.hero__bg {
+  background-image: url(../images/bg-pro-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: 3.3333333333rem 3.3333333333rem;
+  background-size: 38.4666666667rem 13.5333333333rem;
+}
+
 .hero {
   max-width: 100%;
   min-height: 0rem;
   margin: 0 1rem;
 }
-b .hero__inner {
+.hero__inner {
   max-width: 73.6rem;
   min-height: 0rem;
   margin: 0 auto;
