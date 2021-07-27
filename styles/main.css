@@ -436,11 +436,13 @@ p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  display: none;
 }
 .feature__content-image {
   min-height: 20.6666666667rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .feature__content-content p {
   margin-bottom: 2rem;
@@ -449,11 +451,18 @@ p {
   flex: 1;
 }
 
+.feature__content-image {
+  padding: 1.3333333333rem;
+}
+
 .btn-feature {
   background-color: #5267df;
   border-color: #5267df;
   text-transform: capitalize;
   padding: 0.9333333333rem 1.5333333333rem;
+}
+.btn-feature:hover {
+  color: #5267df;
 }
 
 .features__tabs {
@@ -478,4 +487,10 @@ p {
   border-bottom: 0.2666666667rem solid red;
   width: 50%;
   margin: 0 auto;
+  transition: 0.5s;
+}
+
+.features-active {
+  display: block;
+  transition: 0.5s;
 }/*# sourceMappingURL=main.css.map */
