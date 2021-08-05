@@ -391,29 +391,49 @@ h1 {
   }
 }
 
-h2,
+h2 {
+  font-size: 1.6rem;
+  line-height: 3.4666666667rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 786px) {
+  h2 {
+    font-size: 2.6666666667rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  h2 {
+    font-size: 3rem;
+    line-height: 3.3333333333rem;
+  }
+}
+@media screen and (min-width: 786px) {
+  h2 {
+    font-size: 1.7333333333rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 2.1333333333rem;
+    line-height: 3.4666666667rem;
+  }
+}
+
 h3 {
   font-size: 1.6rem;
   line-height: 3.4666666667rem;
   font-weight: 500;
 }
 @media screen and (min-width: 786px) {
-  h2,
-h3 {
-    font-size: 2.6666666667rem;
+  h3 {
+    font-size: 1.7333333333rem;
     line-height: 3rem;
   }
 }
-@media screen and (min-width: 992px) {
-  h2,
-h3 {
-    font-size: 3rem;
-    line-height: 3.3333333333rem;
-  }
-}
 @media screen and (min-width: 1200px) {
-  h2,
-h3 {
+  h3 {
     font-size: 2.1333333333rem;
     line-height: 3.4666666667rem;
   }
@@ -430,6 +450,12 @@ p {
   background-repeat: no-repeat;
   background-size: 38.4666666667rem 13.5333333333rem;
   background-position: -20rem 32rem;
+}
+@media screen and (min-width: 786px) {
+  .features__bg-image {
+    background-size: 51.8rem auto;
+    background-position: -33.3333333333rem 20rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .features__bg-image {
@@ -454,7 +480,7 @@ p {
 .features__content {
   max-width: 73.7333333333rem;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 786px) {
   .features__content {
     text-align: left;
   }
@@ -467,7 +493,7 @@ p {
   flex-direction: column;
   display: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 786px) {
   .feature__content {
     flex-direction: row;
     padding-bottom: 3.3333333333rem;
@@ -486,6 +512,8 @@ p {
 }
 .feature__content-content p {
   margin-bottom: 2rem;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
 }
 @media screen and (min-width: 1200px) {
   .feature__content-content {
